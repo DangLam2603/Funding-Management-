@@ -1,0 +1,27 @@
+﻿@model User
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Spending</title>
+</head>
+<body>
+    <h1>User Spending Details</h1>
+
+    @if (Model != null)
+    {
+        <div>
+            @{
+                var totalSpending = @Model.salaries.OrderByDescending(s => s.Spendings.FirstOrDefault()?.Time).Take(1).ToList().First().total;
+                var totalTransaction = @Model.salaries.OrderByDescending(s => s.monthSalaries.FirstOrDefault()?.dateOfTransaction).Take(1).ToList().First().total;
+            }
+            <h2>Top Salary Transaction +@totalTransaction.ToString("N2")</h2>
+            <h2>Top Spending -@totalSpending.ToString("N2")</h2>
+        </div>
+    }
+    else
+    {
+        <p>User not found.</p>
+    }
+</body>
+</html>

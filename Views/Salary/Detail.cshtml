@@ -1,0 +1,99 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "User Detail";
+}
+
+<h2>Hello @Model.Name</h2>
+<a href="/Salary/DisplaySpending/@Model.Id">DisplaySpending</a>
+<div>
+    <a href="/Salary/Import/@Model.Id">Import new Salary</a><br />    
+</div>
+<h2 style="text-align:center">Transaction</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Date</th>
+            <th>Year</th>
+            <th>Month</th>
+            <th>Salary</th>
+            <th>Total</th>
+            
+        </tr>
+
+    </thead>
+    <tbody>
+        @{
+            var count = 1;
+        }
+        @foreach (var item in Model.salaries)
+        {
+            var sortedMonthSalaries = item.monthSalaries.OrderBy(x => x.dateOfTransaction);
+
+
+            @foreach (var x in sortedMonthSalaries)
+            {
+                <tr>
+                    <td>@count</td>
+                    <td>@x.dateOfTransaction</td>
+                    <td>@item.year</td>
+                    <td>@x.month</td>
+                    <td>+@x.Salary.ToString("N2")</td>
+                    <td>@item.total.ToString("N2")</td>
+                    
+                </tr>
+                count++;
+
+
+            }
+
+        }
+    </tbody>
+
+</table>
+<br />
+
+<h2 style="text-align:center">Spending</h2>
+<a href="/Salary/AddSpending/@Model.Id">Import Spending</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Date</th>
+            <th>Year</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Total Spend</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @{
+            var flag = 1;
+        }
+        @foreach (var item in Model.salaries)
+        {
+            var sortedSpendingSalaries = item.Spendings.OrderBy(x => x.Time);
+
+
+            @foreach (var x in sortedSpendingSalaries)
+            {
+                <tr>
+                    <td>@flag</td>
+                    <td>@x.Time</td>
+                    <td>@item.year</td>
+                    <td>-@x.Price.ToString("N2")</td>
+                    <td>@x.Description</td>
+                    <td>@item.total.ToString("N2")</td>
+                </tr>
+                flag++;
+
+
+            }
+
+        }
+    </tbody>
+
+</table>
+

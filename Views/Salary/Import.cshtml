@@ -1,0 +1,18 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "Import Salary";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-controller="Salary" asp-action="ImportAttributes" method="post">
+    <input type="hidden" name="userId" value="@Model.Id" />    
+
+    <div class="form-group">
+        <label for="newAmount">New Amount:</label>
+        <input type="number" name="newAmount" class="form-control" required />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Import Attributes</button>
+</form>
