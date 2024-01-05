@@ -14,6 +14,6 @@
     <WebStackScaffolding_ControllerDialogWidth>650.4</WebStackScaffolding_ControllerDialogWidth>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
-    <NameOfLastUsedPublishProfile>C:\Users\Admin\Desktop\New folder\Funding-Management-\Properties\PublishProfiles\FundingApplication - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\Admin\Desktop\New folder\Funding-Management-\.github\workflows\FundingApplication.yml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
