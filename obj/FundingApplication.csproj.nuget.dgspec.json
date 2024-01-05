@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\ASP.NET MVC  CORE\\FundingApplication\\FundingApplication.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\New folder\\Funding-Management-\\FundingApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\ASP.NET MVC  CORE\\FundingApplication\\FundingApplication.csproj": {
+    "C:\\Users\\Admin\\Desktop\\New folder\\Funding-Management-\\FundingApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\ASP.NET MVC  CORE\\FundingApplication\\FundingApplication.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\New folder\\Funding-Management-\\FundingApplication.csproj",
         "projectName": "FundingApplication",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\ASP.NET MVC  CORE\\FundingApplication\\FundingApplication.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\New folder\\Funding-Management-\\FundingApplication.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\ASP.NET MVC  CORE\\FundingApplication\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\New folder\\Funding-Management-\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -68,14 +68,6 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.16, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
-              "target": "Package",
-              "version": "[6.0.22, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL.Design": {
-              "target": "Package",
-              "version": "[1.1.0, )"
             }
           },
           "imports": [

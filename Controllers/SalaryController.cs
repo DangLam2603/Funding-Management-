@@ -108,15 +108,15 @@ namespace FundingApplication.Controllers
                 new Salary
                 {
                     Id = new Guid(),
-                    year = DateTime.UtcNow.Year,
+                    year = DateTime.Now.Year,
                     total= totalSalary,
                     monthSalaries = new List<MonthSalary> {
                         new MonthSalary
                         {
                             Id = new Guid(),
-                            month = DateTime.UtcNow.Month,
+                            month = DateTime.Now.Month,
                             Salary = newAmount,
-                            dateOfTransaction = DateTime.UtcNow
+                            dateOfTransaction = DateTime.Now
                         }
                     }
 
@@ -169,7 +169,7 @@ namespace FundingApplication.Controllers
                 new Salary
                 {
                     Id = new Guid(),
-                    year = DateTime.UtcNow.Year,
+                    year = DateTime.Now.Year,
                     total = totalSalary,
                     Spendings = new List<Spending> {
                         new Spending
@@ -177,7 +177,7 @@ namespace FundingApplication.Controllers
                             Id = new Guid(),
                             Description = Description,
                             Price = Price,
-                            Time = DateTime.UtcNow
+                            Time = DateTime.Now
                         }
                     }
 

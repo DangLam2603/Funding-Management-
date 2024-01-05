@@ -15,7 +15,7 @@ namespace FundingApplication
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<ApplicationDBContext>(options =>
             {
-                options.UseNpgsql(builder.Configuration.GetConnectionString("Connection"));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
 
             builder.Services.AddScoped<IUserRepository, UserRepository>();
